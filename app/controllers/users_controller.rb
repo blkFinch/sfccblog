@@ -17,7 +17,7 @@ class UsersController < ApplicationController
       flash[:success] = "Account Created! Happy Gaming!"
       redirect_to root_path
     else
-      flash[:warning] = "errors - please create method to display errors, galen"
+      flash_error(@user)
     end
   end
 
