@@ -1,0 +1,12 @@
+%h2 Users
+%table#index_table
+  %tr
+    %th User
+    %th email
+    %th permission
+    %th
+  - @users.each do |user|
+    %tr
+      %td= user.screen_name
+      %td= user.email
+      %td= user.permission
