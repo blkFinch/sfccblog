@@ -1,0 +1,7 @@
+.div#feed_item
+  - Article.all.each do | article |
+    %h2= article.title
+    = link_to "#{article.user.screen_name}", user_path(article.user)
+    %br
+    =article.body
+
