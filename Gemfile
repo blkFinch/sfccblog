@@ -38,6 +38,9 @@ gem 'jquery-rails'
 #haml is pretty!
 gem 'haml-rails'
 
+#for better blog post formatting
+gem 'simple_form'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
