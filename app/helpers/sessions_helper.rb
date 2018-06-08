@@ -9,6 +9,7 @@ module SessionsHelper
     @current_user ||= found_user
   end
 
+  # TODO: implement API token login
   def found_user
     if(session[:user_id])
       User.find_by(id: session[:user_id])
@@ -17,7 +18,11 @@ module SessionsHelper
     end
   end
 
+  def is_admin?
+    current_user&.permission.to_i > 2
+  end
 
+  # methods to handle sessions
   def logged_in?
     !current_user.nil?
   end

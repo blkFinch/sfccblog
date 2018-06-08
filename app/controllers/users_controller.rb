@@ -28,4 +28,19 @@ class UsersController < ApplicationController
                                     :email, :permission]
       params.require(:user).permit(allowed)
     end
+
+    def correct_user
+      @user = User.find(params[:id])
+      unless @user == current_user || current_user.permission >= 3
+        flash[:danger] = "Not Authorized!"
+        redirect_to(root_url)
+      end
+    end
+
+    def is_admin
+      unless current_user.permission >= 3
+        flash[:danger] = "Not Authorized!"
+        redirect_to(root_url)
+      end
+    end
 end

@@ -1,0 +1,12 @@
+.header
+  %h2= @article.title
+  .container-fluid
+    .row
+      .col-sm-10
+        = link_to "#{@article.user.screen_name}", user_path(@article.user)
+        %br
+        =@article.body
+        %br
+        %span.timestamp
+          %em
+            Posted #{time_ago_in_words(@article.created_at)} ago.
