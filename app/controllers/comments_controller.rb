@@ -7,7 +7,7 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to article_path(@article)
     else
-      flash[:danger] = "Couldnt create comment : ((("
+      flash_error(@comment)
     end
   end
 

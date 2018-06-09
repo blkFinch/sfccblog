@@ -1,5 +1,6 @@
 class User < ApplicationRecord
-  has_many :articles
+  has_many :articles, dependent: :destroy
+  has_many :comments
 
   validates :screen_name, presence: true, length: { maximum: 30 },
                           uniqueness: true
