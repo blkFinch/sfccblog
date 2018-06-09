@@ -1,0 +1,4 @@
+= form_with(model: [@article, @article.comments.build], 
+            local: true) do |form|
+  = form.text_area :body, class: 'form-control'
+  = form.submit 'Comment!', class: 'btn btn-primary'

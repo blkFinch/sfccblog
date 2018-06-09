@@ -1,7 +1,9 @@
 module ApplicationHelper
   def link_to_log_in_header
     if logged_in?
-      "<a> #{link_to 'Log Out', logout_path, method: :delete} </a>".html_safe      
+      link_to 'Log Out', logout_path, method: :delete     
+    else
+      link_to 'Log In', login_path
     end
   end
 

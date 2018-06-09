@@ -1,0 +1,8 @@
+.comment{:id => "comment#{comment.id}"}
+  %em 
+    " 
+    = comment.body 
+    "
+    %br
+    = link_to comment.user.screen_name, comment.user
+  %br
