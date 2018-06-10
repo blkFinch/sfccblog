@@ -1,11 +1,5 @@
 .div#feed_item
   - Article.all.each do | article |
-    %h2= article.title
-    = link_to "#{article.user.screen_name}", user_path(article.user)
-    %br
-    =article.body
-    %br
-    %span.timestamp
-      %em
-        Posted #{time_ago_in_words(article.created_at)} ago.
+    = render partial:'shared/article', locals: {article: article}
+    %hr  
 

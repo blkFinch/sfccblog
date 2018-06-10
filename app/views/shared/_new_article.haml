@@ -3,5 +3,9 @@
   = f.text_field :title, class: 'form-control'
   =f.label :author
   = f.text_field :author, class: 'form-control'
-  = f.text_area :body, class: 'form-control'
+  = f.text_area :body, rows: 25, cols: 50, class: 'tinymce'
   = f.submit "Post", class: "btn btn-primary"
+
+= tinymce 
+
+

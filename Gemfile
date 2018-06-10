@@ -36,8 +36,11 @@ gem 'jquery-rails'
 #haml is pretty!
 gem 'haml-rails'
 
-#for better blog post formatting
+#for better blog post formatting TODO: might be useless remove and test
 gem 'simple_form'
+
+#rich text editor
+gem 'tinymce-rails'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'

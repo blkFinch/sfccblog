@@ -5,7 +5,7 @@
       .col-sm-8
         = link_to "#{@article.user.screen_name}", user_path(@article.user)
         %br
-        =@article.body
+        =@article.body.html_safe
         %br
         %span.timestamp
           %em
@@ -13,9 +13,11 @@
       .col-sm-3
         -if logged_in?
           = render partial: 'shared/new_comment_form'
+        -if @comments.any?
+          %h4 Comments:
+          - @comments.each do | comment |
+            = render partial: "shared/comment", locals: {comment: comment }
     .row
       .col-sm-4
       -# TODO: make helper method
-      -if @comments.any?
-        - @comments.each do | comment |
-          = render partial: "shared/comment", locals: {comment: comment }
+      

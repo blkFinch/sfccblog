@@ -6,5 +6,8 @@
       .col-sm-3
         %p
           Users info here! this is where the users info goes!
+        -if @user.comments.any?
+          - @user.comments.each do | comment |
+            = render partial: "shared/comment", locals: {comment: comment }
       .col-sm-7
-        = render partial: 'shared/article_feed'
+        = render partial: 'user_article_feed'

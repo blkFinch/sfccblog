@@ -7,6 +7,6 @@
     %th
   - @users.each do |user|
     %tr
-      %td= user.screen_name
+      %td= link_to user.screen_name, user_path(user)
       %td= user.email
       %td= user.permission

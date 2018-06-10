@@ -22,6 +22,7 @@ class ArticlesController < ApplicationController
       redirect_to root_path
     else
       flash_error(@article)
+      render 'new'
     end
   end
 
