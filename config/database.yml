@@ -92,4 +92,5 @@ production:
   password: f0d1faedd669f6bb18df5eca9c3980e8e4787ff965024b85d36dd76ef5868591 
   url: <%= ENV['POSTGRESQL_URL'] %>
   database: db_gameblog
+  port: 5432
   
