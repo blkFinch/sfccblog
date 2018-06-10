@@ -1,2 +1,2 @@
 cd $WORKDIR
-bundle exec puma -C /bear/config/puma.rb
+bundle exec puma -C /blog/config/puma.rb
