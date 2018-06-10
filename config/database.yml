@@ -82,6 +82,14 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: blog_production
+  adapter: postgresql
+  encoding: unicode
+  host: postgres 
+  # For details on connection pooling, see Rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: db_gameblog
+  password: f0d1faedd669f6bb18df5eca9c3980e8e4787ff965024b85d36dd76ef5868591 
+  url: <%= ENV['POSTGRESQL_URL'] %>
+  database: db_gameblog
   
