@@ -34,4 +34,4 @@ COPY . .
 #trying this chunk from emr
 EXPOSE 3000
 #ENTRYPOINT ["bundle", "exec"]
-#CMD ["$WORKDIR/script/run.sh"]
+CMD bundle exec puma 
