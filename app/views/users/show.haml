@@ -5,8 +5,10 @@
     .row
       .col-sm-3
         %p
-          Users info here! this is where the users info goes!
+          Make a new post, 
+          = link_to 'here!', new_article_path 
         -if @user.comments.any?
+          %h4 COMMENTS:
           - @user.comments.each do | comment |
             = render partial: "shared/comment", locals: {comment: comment }
       .col-sm-7
