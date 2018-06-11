@@ -7,6 +7,12 @@ module ApplicationHelper
     end
   end
 
+  def can_delete?(user)
+    if current_user
+     user == current_user || current_user.permission >= 3
+    end
+  end
+
   def link_to_user_index
     if is_admin?
       "<a>#{link_to "Users", users_path}</a>".html_safe

@@ -5,4 +5,7 @@
     "
     %br
     = link_to comment.user.screen_name, comment.user
+    -# TODO: add delete method for comments
+    -# -if can_delete?(comment.user)
+    -#   =link_to 'Delete', comment, method: :delete
   %br

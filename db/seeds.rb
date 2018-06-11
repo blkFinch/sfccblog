@@ -7,10 +7,13 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.create(screen_name:"finch", email:"finch@email.com", password:"finchpass", 
-            password_confirmation:"finchpass", permission: 3)
+            password_confirmation:"finchpass", name:"Galen Hutchison", permission: 3)
 
 User.create(screen_name:"scout", email:"scouty@email.com", password:"password", 
-      password_confirmation:"password", permission: 2)
+      password_confirmation:"password", name: "Scout" permission: 2)
 
 User.create(screen_name:"user", email:"user@user.com", password:"password", 
-      password_confirmation:"password", permission: 1)
+      password_confirmation:"password", name: "User" permission: 1)
+
+User.create(screen_name:"alison", email:"alison.johnson@sfcc.edu", name:"alison johnson", permission: 3, 
+            password:"changemenow", password_confirmation:"changemenow")

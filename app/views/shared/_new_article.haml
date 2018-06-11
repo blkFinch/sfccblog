@@ -1,8 +1,7 @@
 = form_for @article do |f|
   = f.label :title
   = f.text_field :title, class: 'form-control'
-  =f.label :author
-  = f.text_field :author, class: 'form-control'
+  %br
   = f.text_area :body, rows: 25, cols: 50, class: 'tinymce'
   = f.submit "Post", class: "btn btn-primary"
 
