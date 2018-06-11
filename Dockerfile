@@ -32,6 +32,6 @@ RUN bundle install
 COPY . .
 
 #trying this chunk from emr
-
+EXPOSE 8080
 #ENTRYPOINT ["bundle", "exec"]
 CMD bundle exec puma -p $PORT -C ./config/puma.rb
