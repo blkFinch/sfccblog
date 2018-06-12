@@ -18,6 +18,7 @@ class UsersController < ApplicationController
       redirect_to root_path
     else
       flash_error(@user)
+      redirect_to new_user_path
     end
   end
 
@@ -25,7 +26,7 @@ class UsersController < ApplicationController
 
     def user_params
       allowed = [:screen_name, :password, :password_confirmation,
-                                    :email, :permission]
+                                    :email, :permission, :name]
       params.require(:user).permit(allowed)
     end
 
