@@ -79,9 +79,9 @@ group :test do
 end
 
 #rails library tuned to run smoothly on Heroku/Dokku cloud infrastructures
-group :production do  
-  gem 'rails_12factor'
-end 
+# group :production do  
+#   gem 'rails_12factor'
+# end 
 
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
