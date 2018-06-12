@@ -1,5 +1,4 @@
 class SessionsController < ApplicationController
-  skip_filter :verify_authenticity_token
   include SessionsHelper
 
   def new
