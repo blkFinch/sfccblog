@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   include SessionsHelper
+  protect_from_forgery with: :reset_session
 
   def new
     @user = current_user

@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
-  
+  protect_from_forgery with: :reset_session
+
   def create
     @article = Article.find(params[:article_id])
     @user = current_user
