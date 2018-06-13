@@ -13,4 +13,7 @@
     %a
       (#{article.comments.count})
   - if can_delete?(article.user)
-    =link_to 'Delete', article, method: :delete, confirm: "Are you sure?"
+    %br
+    %em=link_to 'Delete', article, method: :delete, confirm: "Are you sure?"
+    |
+    %em=link_to 'Edit', edit_article_path(article)

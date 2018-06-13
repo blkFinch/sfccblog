@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
   protect_from_forgery with: :reset_session
+  before_action :correct_user, only: [:edit, :update]
+  before_action :is_admin, only: [:index]
 
   def new
     @user = User.new
@@ -17,10 +19,25 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash[:success] = "Account Created! Happy Gaming!"
+      log_in @user
       redirect_to root_path
     else
       flash_error(@user)
       redirect_to new_user_path
+    end
+  end
+
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+    if @user.update_attributes(user_params)
+      flash[:sucess] = "Profile Updated!"
+      redirect_to @user
+    else
+      render 'edit'
     end
   end
 

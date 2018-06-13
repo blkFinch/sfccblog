@@ -1,0 +1,28 @@
+= form_for(@user) do  |form|
+  = form.label :screen_name
+  %br/
+  = form.text_field :screen_name
+  %br/
+  %br/
+  = form.label :name
+  %br/
+  = form.text_field :name
+  %br
+  %br
+  =form.label :email
+  %br/
+  =form.email_field :email
+  %br/
+  %br/
+  = form.label :password
+  %br/
+  = form.password_field :password
+  %br/
+  %br/
+  = form.label :password_confirmation, "Confirm Password"
+  %br/
+  = form.password_field :password_confirmation
+  %br/
+  %br/
+
+  = form.submit "Save Changes!", class: 'btn btn-primary'

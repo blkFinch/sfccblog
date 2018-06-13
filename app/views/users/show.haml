@@ -5,8 +5,10 @@
     .row
       .col-sm-3
         %p
-          Make a new post, 
-          = link_to 'here!', new_article_path 
+          Make a new post,
+          = link_to 'here!', new_article_path
+          - if can_delete?(@user)
+            = link_to 'Edit', edit_user_path(@user)
         -if @user.comments.any?
           %h4 COMMENTS:
           - @user.comments.each do | comment |

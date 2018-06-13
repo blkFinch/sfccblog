@@ -41,7 +41,6 @@ gem 'simple_form'
 
 #rich text editor
 gem 'tinymce-rails'
-
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
@@ -79,9 +78,9 @@ group :test do
 end
 
 #rails library tuned to run smoothly on Heroku/Dokku cloud infrastructures
-# group :production do  
+# group :production do
 #   gem 'rails_12factor'
-# end 
+# end
 
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
